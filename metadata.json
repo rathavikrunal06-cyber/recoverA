@@ -1,0 +1,6 @@
+{
+  "name": "Razorpay AI Revenue Recovery & Smart Dunning Engine",
+  "description": "Production-grade AI Revenue Recovery & Smart Dunning Engine for Razorpay merchants, featuring webhook simulation, real-time diagnostic agent, rail switching, and architecture telemetry.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
