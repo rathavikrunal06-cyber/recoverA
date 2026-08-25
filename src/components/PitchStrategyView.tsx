@@ -1,5 +1,5 @@
 import React from 'react';
-import { Presentation, Target, Award, CheckCircle2, TrendingUp, Zap, HelpCircle, Layers, ShieldCheck, DollarSign } from 'lucide-react';
+import { Presentation, Target, Award, CheckCircle2, TrendingUp, Zap, Layers, ShieldCheck, DollarSign } from 'lucide-react';
 
 export const PitchStrategyView: React.FC = () => {
   return (
@@ -127,42 +127,6 @@ export const PitchStrategyView: React.FC = () => {
               <span><strong>Merchant Retention:</strong> Merchants stay with Razorpay because no other gateway offers automated AI-driven cart and mandate rescue.</span>
             </li>
           </ul>
-        </div>
-      </div>
-
-      {/* Anticipated Executive Q&A */}
-      <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6 space-y-4">
-        <h3 className="text-sm font-bold text-white flex items-center gap-2">
-          <HelpCircle className="w-4 h-4 text-amber-400" /> Anticipated Panel Q&A & Defenses
-        </h3>
-
-        <div className="space-y-3">
-          <div className="p-3.5 bg-slate-950 rounded-xl border border-slate-800 space-y-1">
-            <div className="text-xs font-bold text-amber-300">
-              Q: "What if the LLM hallucinates a 90% discount or takes 3 seconds to respond?"
-            </div>
-            <p className="text-xs text-slate-300 leading-relaxed">
-              <strong>Answer:</strong> We enforce a strict dual-tier architecture. A 250ms circuit breaker automatically defaults to the deterministic rule engine if the LLM lags. All financial parameters (discounts, retry counts) are hard-capped by mathematical guardrail assertions before execution.
-            </p>
-          </div>
-
-          <div className="p-3.5 bg-slate-950 rounded-xl border border-slate-800 space-y-1">
-            <div className="text-xs font-bold text-amber-300">
-              Q: "How do you avoid double-charging the customer if the bank later clears the original failed payment?"
-            </div>
-            <p className="text-xs text-slate-300 leading-relaxed">
-              <strong>Answer:</strong> Our state machine implements distributed locks with active status polling. When an alternative recovery rail is clicked, we verify the primary order state with Razorpay’s Core API. If the original payment transitions to `captured`, the recovery link is invalidated instantly.
-            </p>
-          </div>
-
-          <div className="p-3.5 bg-slate-950 rounded-xl border border-slate-800 space-y-1">
-            <div className="text-xs font-bold text-amber-300">
-              Q: "Why is smart dunning better than standard cron retries every 24 hours?"
-            </div>
-            <p className="text-xs text-slate-300 leading-relaxed">
-              <strong>Answer:</strong> Dumb 24-hour retries trigger bank anti-fraud blocks and penalize customer debit accounts with auto-debit failure charges (₹250-500). RecoverAI models the Indian salary cycle (predicting 1st/5th liquidity) and sends a pre-debit WhatsApp alert so the user funds their account beforehand.
-            </p>
-          </div>
         </div>
       </div>
     </div>
