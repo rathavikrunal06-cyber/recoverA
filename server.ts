@@ -1242,4 +1242,10 @@ async function startServer() {
   });
 }
 
-startServer();
+// Vercel imports this Express instance from api/[...path].ts. Local development
+// keeps the existing listener and Vite middleware unchanged.
+if (!process.env.VERCEL) {
+  void startServer();
+}
+
+export default app;
